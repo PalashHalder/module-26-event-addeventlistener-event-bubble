@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding New Comment</title>
+</head>
+<body>
+    <h1>Please, add your comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum officia quisquam hic mollitia. Molestiae porro a dolores autem non praesentium, tenetur illo impedit veritatis hic recusandae sapiente numquam minus temporibus accusantium deleniti quibusdam quaerat beatae neque! Reprehenderit odio corrupti quis non itaque cupiditate, minima consequatur sed iste maiores, placeat omnis.</p>
+        <p>Similique pariatur corrupti consequatur, harum saepe, minima laborum accusantium ut fuga recusandae explicabo repellendus libero perspiciatis tenetur distinctio. Voluptatibus temporibus reiciendis, impedit, laborum placeat, nostrum nulla consequatur minima esse culpa autem praesentium. Molestias, quam! Sequi non ad, voluptas dolores modi corrupti sint quibusdam consectetur nesciunt vitae! Sint sapiente exercitationem unde?</p>
+        <p>Reiciendis eveniet, corrupti dolore aliquam et obcaecati dignissimos nemo, ipsum at magni numquam? Blanditiis, vel quam, consequuntur incidunt sit magni optio ullam suscipit rerum corporis aliquid natus consectetur minima eos facere! Eaque reiciendis corporis autem iste odit aspernatur, architecto totam nobis voluptas quam odio! Dolor non eos qui magni reprehenderit.</p>
+    </div>
+    <div><textarea name="" id="new-comment" cols="60" rows="5"></textarea></div>
+    <br>
+    <button id="btn-post">Post</button>
+    
+<!--    Instruction for the task:
+    0- Write text inside the comment box
+    1- Click the Post button
+    2- hold the text inside the inpot box
+    3- set the text in the page
+    4- clear the textarea 
+-->
+
+<script>
+    // Step-1: add event listener to the post button
+    document.getElementById('btn-post').addEventListener('click', function(){
+        // Step-2: get the comment inside the textarea
+        const commentBox = document.getElementById('new-comment');
+        const newComment = commentBox.value;
+        // add an id where (div) you want to add the comment inside the page
+        // Step-3: set the comment inside the comment container
+        // sub-steps:
+        //         3-1: get the comment container
+        //         3-2: create a new element(p tag)
+        //         3-3: set the text of the comment as inner text of the p tag
+        //         3-4: add the p tag using appendChild 
+
+        const commentContainer = document.getElementById('comment-container');
+        const p = document.createElement('p');
+        p.innerText = newComment;
+        commentContainer.appendChild(p);
+
+        // Step-4: clear the text area
+        commentBox.value = '';
+    })
+</script>
+    
+</body>
+</html>
