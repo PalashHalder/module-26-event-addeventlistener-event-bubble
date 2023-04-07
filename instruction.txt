@@ -1,0 +1,28 @@
+26-6: Simple Github like delete confirmation button
+
+more-events.html:
+
+button clicked events
+
+input field focus and blur
+
+key related events:
+
+    keydown
+    keypress
+    keyup       we'll use keyup
+
+
+নির্দিষ্ট বিষয়টি input field থাকলে বাটন সক্রিয় হবে,কিন্তু অন্য input delete দিলে  আবার নিস্ক্রিয় হয়ে যাবে।
+
+github.html
+
+
+
+
+26-7 (semi-advanced) Event bubble and Stop propagating
+
+bubble.html
+
+
+
